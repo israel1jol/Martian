@@ -1,0 +1,128 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"sans-serif";
+}
+.responsive-link{
+  display:none;
+  position:absolute;
+  top:70px;
+  left:170px;
+  z-index:100000000;
+  background:linear-gradient(to left, rgb(255, 255, 255), rgb(250, 255, 255), rgb(253, 255, 255));
+  border:rgba(0, 0, 0, 0.54) 1px solid;
+  animation:toggled 400ms;
+  border-radius:9px;
+  color:black;
+}
+.res-section-flex{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.responsive-bar{
+  display:none;
+}
+.res-sectionview-flex{
+  margin:30px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+
+}
+.res-sectionview-flex p{
+  width:70%;
+  margin:auto;
+  font-size:27px;
+}
+
+
+.lin3{
+  max-width:0;
+  margin:2px;
+  height:4px;
+  transition:0.7s ease-in;
+}
+
+.ctp-link:hover .lin3{
+  background:lightblue;
+  max-width:60px;
+}
+
+.custom-display{
+  font-size:clamp(1.8rem, 4.5vw, 8rem);
+}
+
+.con{
+  min-height:75vh;
+}
+
+.astro-icon{
+  animation-name:astro 500ms infinite;
+}
+.responsive-header{
+  display:flex;
+}
+.responsive-adjust{
+  display:block;
+}
+@keyframes toggled{
+  0%{transform:translateY(-100px); opacity:0;};
+  25%{transform:translateY(-100px); opacity:0.1;};
+  50%{transform:translateY(-100px); opacity:0.3;};
+  75%{transform:translateY(-100px); opacity:0.4;};
+  100%{transform:translateY(-100px); opacity:1;};
+}
+
+@keyframes astro{
+  0%{transform:rotate(0deg);};
+  50%{transform:rotate(90deg);};
+  75%{transform:rotate(-180deg);};
+  100%{transform:rotate(90deg);};
+}
+
+
+@media(max-width:540px){
+  .custom-link{
+    display:none;
+  }
+
+  .responsive-link{
+    display:block;
+  }
+
+  .responsive-header{
+    display:block;
+  }
+
+  .res-section-flex{
+    display:block;
+    line-height:3rem;
+  }
+  .responsive-bar{
+    display:block;
+  }
+  .res-sectionview-flex{
+    display:block;
+    text-align:center;
+    margin:auto;
+    width:75%;
+  }
+  .res-sectionview-flex p{
+    width:98%;
+  }
+  .responsive-adjust{
+    display:flex;
+    text-align:center;
+  }
+  .header-right{
+    line-height:2.5rem;
+  }
+  .mauto{
+    margin:auto;
+  }
+}
